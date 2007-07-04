@@ -1,0 +1,73 @@
+body { 
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size:.90em;
+    line-height:1.4em;
+    margin:15px;
+    background-color:#FFFFFF;
+}
+img {border:none;}
+a { text-decoration: none;}
+a:visited  { color: #2929ff;}
+a:hover { color: #0000ff;}
+
+h1 {
+    font-size:1.6em;
+    font-weight:bold;
+}
+
+h2 {
+    font-size:1.1em;
+    font-weight:bold;
+    margin:10px 0px 10px 0px;
+}
+.red {
+	font-weight:bold;
+	color:#FF0000;
+}
+.rightbar {
+    float:right;
+    margin:10px 30px 10px 30px;
+}
+.slogan {
+    margin-top:10px;
+}
+.toolbar {
+    margin-top:20px;
+}
+.copyright {
+    font-size:.8em;
+    text-align:center;
+    color:909090;
+}
+.pylogo {
+	text-align:right;
+	float:right;
+}
+.code {
+    font-family:monospace;
+}
+p {
+    /*margin:5px 20px 5px 20px;*/
+}
+
+li {
+    margin:1px 0px 1px 0px;
+}
+td {
+    font-size:small;
+}
+
+pre { 
+    margin: 1.5em; 
+    padding: .5em; 
+    font-size: .95em; 
+    line-height:1em;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    width:450px;
+    overflow:auto;
+}
+
+#speedchart {
+    margin:5px 10px 5px 10px;
+}

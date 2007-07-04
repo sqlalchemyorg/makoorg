@@ -1,0 +1,42 @@
+<html>
+<%def name="title()">
+Mako Templates for Python
+</%def>
+<head>
+<title>${self.title()} </title>
+${self.style()}
+
+<%def name="style()">
+	<link rel="stylesheet" href="/css/site.css"></link>
+	<link rel="stylesheet" href="/docs/highlight.css"></link>
+</%def>
+
+</head>
+<body>
+    <div class="rightbar">
+    <div class="slogan">
+    Hyperfast and lightweight templating for the Python platform.
+    </div>
+
+    <div class="toolbar">
+    <a href="/">Home</a>
+    &nbsp; | &nbsp;
+    <a href="/trac">Trac</a> 
+    &nbsp; | &nbsp;
+    <a href="/community.html">Community</a>
+    &nbsp; | &nbsp;
+    <a href="/docs/">Documentation</a>
+    &nbsp; | &nbsp;
+    <a href="/download.html">Download</a>
+    </div>
+    </div>
+    
+    <a href="/"><img src="/images/makoLogo.png" /></a>
+
+    <hr/>
+    
+    ${next.body()}
+<hr/>
+<div class="copyright">All content copyright (c) 2006,2007 by Michael Bayer. All rights reserved.  mike(&)zzzcomputing.com</div>
+</body>
+</html>
