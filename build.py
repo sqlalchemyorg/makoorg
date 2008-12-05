@@ -55,7 +55,7 @@ for docs, prefix in STANDARD_DOCS:
     copydir(os.path.join(docs, 'build/templates'), os.path.join('work/templates/docs', prefix), True)
     copydir(os.path.join(docs, 'build/output'), os.path.join('work/htdocs/docs', prefix))
     for name in ['docs.css', 'docutil.css', 'scripts.js', 'style.css', 'alphaapi.html', 
-                'alphaimplementation.html', 'syntaxhighlight.css']:
+                'alphaimplementation.html', 'syntaxhighlight.css', 'highlight.css']:
         if os.path.exists(os.path.join(docs, name)):
             conditional_copy(os.path.join(docs, name), os.path.join('work/htdocs/docs', prefix, name))
 
