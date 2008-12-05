@@ -22,8 +22,10 @@ for dir in [options.output, './work', './work/templates', './work/htdocs']:
 def copydir(name, dest, htmlonly=False):
     for root, dirs, files in os.walk(name):
         relative = root[len(name + "/"):]
+        if ".svn" in relative:
+            continue
 
-        for dir in dirs:
+        for dir in dirs + ['.']:
             if ".svn" in dir:
                 continue
             if not os.path.exists(os.path.join(dest, relative, dir)):
