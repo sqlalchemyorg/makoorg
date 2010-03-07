@@ -1,3 +1,108 @@
+0.3
+- Python 2.3 support is dropped. [ticket:123]
+
+- Python 3 support is added ! See README.py3k
+  for installation and testing notes.
+  [ticket:119]
+  
+- Unit tests now run with nose.  [ticket:127]
+
+- Source code escaping has been simplified.
+  In particular, module source files are now 
+  generated with the Python "magic encoding 
+  comment", and source code is passed through 
+  mostly unescaped, except for that code which
+  is regenerated from parsed Python source.
+  This fixes usage of unicode in 
+  <%namespace:defname> tags.  [ticket:99]
+
+- RichTraceback(), html_error_template().render(),
+  text_error_template().render() now accept "error"
+  and "traceback" as optional arguments, and 
+  these are now actually used.  [ticket:122]
+  
+- The exception output generated when 
+  format_exceptions=True will now be as a Python
+  unicode if it occurred during render_unicode(),
+  or an encoded string if during render().
+
+- A percent sign can be emitted as the first
+  non-whitespace character on a line by escaping
+  it as in "%%". [ticket:112]
+ 
+- Template accepts empty control structure, i.e.
+  % if: %endif, etc. [ticket:94]
+
+- The <%page args> tag can now be used in a base 
+  inheriting template - the full set of render()
+  arguments are passed down through the inherits
+  chain.  Undeclared arguments go into **pageargs
+  as usual.  [ticket:116]
+
+- defs declared within a <%namespace> section, an
+  uncommon feature, have been improved.  The defs
+  no longer get doubly-rendered in the body() scope,
+  and now allow local variable assignment without
+  breakage.  [ticket:109]
+
+- Windows paths are handled correctly if a Template
+  is passed only an absolute filename (i.e. with c: 
+  drive etc.)  and no URI - the URI is converted
+  to a forward-slash path and module_directory
+  is treated as a windows path.  [ticket:128]
+
+- TemplateLookup raises TopLevelLookupException for
+  a given path that is a directory, not a filename,
+  instead of passing through to the template to 
+  generate IOError.  [ticket:73]
+  
+0.2.6
+
+- Fix mako function decorators to preserve the
+  original function's name in all cases. Patch
+  from Scott Torborg.
+
+- Support the <%namespacename:defname> syntax in
+  the babel extractor. [ticket:118]
+
+- Further fixes to unicode handling of .py files with the
+  html_error_template. [ticket:88]
+
+0.2.5
+- Added a "decorator" kw argument to <%def>,
+  allows custom decoration functions to wrap
+  rendering callables.  Mainly intended for
+  custom caching algorithms, not sure what
+  other uses there may be (but there may be).
+  Examples are in the "filtering" docs.
+
+- When Mako creates subdirectories in which
+  to store templates, it uses the more
+  permissive mode of 0775 instead of 0750,
+  helping out with certain multi-process 
+  scenarios. Note that the mode is always
+  subject to the restrictions of the existing
+  umask. [ticket:101]
+  
+- Fixed namespace.__getattr__() to raise 
+  AttributeError on attribute not found 
+  instead of RuntimeError.  [ticket:104]
+  
+- Added last_modified accessor to Template,
+  returns the time.time() when the module
+  was created. [ticket:97]
+
+- Fixed lexing support for whitespace
+  around '=' sign in defs. [ticket:102]
+
+- Removed errant "lower()" in the lexer which
+  was causing tags to compile with 
+  case-insensitive names, thus messing up
+  custom <%call> names. [ticket:108]
+
+- added "mako.__version__" attribute to
+  the base module.  [ticket:110]
+  
 0.2.4
 - Fixed compatibility with Jython 2.5b1.
 
