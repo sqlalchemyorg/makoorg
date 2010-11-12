@@ -4,7 +4,12 @@
 <%def name="title()">
     welcome to Mako!
 </%def>
-
+<%
+    # this is a hack to get the functions from functions.incl
+    # to be present in the local namespace for usage in filter
+    highlight_mako
+    highlight_python
+%>
 <h1>Mako Templates for Python</h1>
 
 
@@ -12,10 +17,7 @@
 <p>Mako is used by the <a href="http://www.python.org/dev/pydotorg/website/">python.org website</a> as the basis for their site build system (<a href="https://svn.python.org/www/trunk/beta.python.org/build/README">README</a>), as well as by <a href="http://reddit.com">reddit.com</a> for their newly launched beta site.   It is the default template language included with the <a href="http://pylonshq.com">Pylons</a> web framework.
 </p>
 <h2>Nutshell:</h2>
-<%
-   highlight_mako
-%>
-<pre class="nutshell"><%text filter="highlight_mako">
+<pre class="codesample"><%text filter="highlight_mako">
 <%inherit file="base.html"/>
 <%
     rows = [[v for v in range(0,10)] for row in range(0,10)]
@@ -45,7 +47,7 @@
 
 <ul>
     <li>Super-simple API.  For basic usage, just one class, ${code('Template')} is needed:
-    <pre><%text filter="trim, h">from mako.template import Template
+    <pre class="codesample"><%text filter="highlight_python">from mako.template import Template
 print Template("hello ${data}!").render(data="world")
     </%text></pre>
     For filesystem management and template caching, add the ${code('TemplateLookup')} class.

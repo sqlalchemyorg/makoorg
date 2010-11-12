@@ -64,7 +64,7 @@ for docs, prefix in SPHINX_DOCS:
     
 from mako.lookup import TemplateLookup
 
-lookup = TemplateLookup(directories=['./work/templates', './work/htdocs'], output_encoding='utf-8', cache_dir='./work/cache')
+lookup = TemplateLookup(directories=['./work/templates', './work/htdocs'], strict_undefined=True, output_encoding='utf-8', cache_dir='./work/cache')
 
 todo = './work/htdocs'
 for root, dirs, files in os.walk(todo):

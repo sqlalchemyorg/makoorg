@@ -1,6 +1,5 @@
 body { 
     font-family: Tahoma, Geneva, sans-serif;
-    font-size:.90em;
     line-height:1.4em;
     margin:15px;
     background-color:#FFFFFF;
@@ -10,6 +9,13 @@ a { text-decoration: none;}
 a:visited  { color: #2929ff;}
 a:hover { color: #0000ff;}
 
+#wrap {
+    margin:0 auto;
+    max-width:1024px;
+    min-width:480px;
+    position:relative;
+    
+}
 h1 {
     font-size:1.6em;
     font-weight:bold;
@@ -20,6 +26,11 @@ h2 {
     font-weight:bold;
     margin:10px 0px 10px 0px;
 }
+
+.clearfix{
+    clear:both;
+}
+
 .red {
 	font-weight:bold;
 	color:#FF0000;
@@ -46,18 +57,16 @@ h2 {
 .code {
     font-family:monospace;
 }
-p {
-    /*margin:5px 20px 5px 20px;*/
-}
 
 li {
     margin:1px 0px 1px 0px;
 }
-td {
+
+.speedchart td {
     font-size:small;
 }
 
-pre { 
+pre.codesample { 
     margin: 1.5em; 
     padding: .5em; 
     font-size: .95em; 
