@@ -1,0 +1,383 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, "Lucida Grande", sans-serif;
+	font-size: small;
+	text-align: left; 
+	/*text-align: center;*/
+	line-height: 1.3em;
+	color: #333;
+	background: #fff;
+	}
+
+/* links
+---------------------------------------------------------- */
+
+a:link {
+	padding: 0 0 1px 0;
+	font-weight: normal;
+	text-decoration: none;
+	color: #900;
+	}
+a:visited {
+    color: #700;
+	font-weight: normal;
+	text-decoration: none;
+    }	
+a:hover {
+	color: #f00;
+	font-weight: normal;
+	text-decoration: underline;
+	}
+
+/* page structure
+---------------------------------------------------------- */
+
+#wrap {
+	position: relative;
+	max-width: 1024px;
+	min-width: 480px;
+	margin: 0 auto;
+	font-size: 95%;
+	text-align: left;
+	/*border-top: 3px solid #333;*/
+	background: #fff;
+	}
+#main-body {
+	padding: 20px 20px 0 20px;
+	}
+#content {
+	float: left;
+	width: 75%;
+	}
+#content-inner {
+	margin: 0 30px 0 0;
+	}
+#sidebar {
+	float: right;
+	width: 25%;
+	font-size: 90%;
+	line-height: 1.5em;
+	color: #777;
+	}
+#docs {
+    /*float: left; */
+    }	
+#footer {
+	clear: both;
+    margin: 50px 0 20px 0;
+    border-top: 1px solid #d9d9d9;
+    padding: 2em 1em;
+    background: #fff url(../_img/nav-shadow2.gif) top left repeat-x;
+	}
+
+/* header
+---------------------------------------------------------- */
+
+#header {
+    height: 65px;
+	background: #fff url(../_img/symbols-bg5.gif) top right no-repeat;
+
+	/*background: #c00 url(../_img/symbols-bg6.jpg) repeat-x top left;*/
+	}
+#logo {
+	padding: 0;
+    width: 172px;
+	}
+#logo img {
+    /*margin: 15px 0 0 16px;*/
+    margin: 7px 0 0 16px;
+    }
+#description {
+    position: absolute;
+    width: 180px;
+    top: 45px; right: 0px;
+    margin: 0 20px 0 0;
+    }
+
+/* navigation
+---------------------------------------------------------- */
+
+#nav {
+	padding: 0px 15px 0px 15px;
+	background: #787 url(../_img/navbg1.gif) repeat-x top left;
+	}
+#nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	}
+#nav li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	}
+#nav li a {
+	float: left;
+	margin: 0;
+	padding: 4px 9px;
+	font-family: arial, verdana, sans-serif;
+	font-size: 100%;
+	font-weight: normal;
+	text-decoration: none;
+	color: #f0f0f0;
+	border-bottom: 1px solid #787;
+	border-right: 1px solid #787;	
+	}
+#nav li a:hover {
+	color: #fff;
+	border-bottom: 1px solid #222;
+	border-right: 1px solid #222;
+	background-color: #333;
+	}
+#nav li a.active {
+	font-weight: bold;
+	color: #fff;
+	border-bottom: 1px solid #222;
+	border-right: 1px solid #222;
+	background-color: #333;
+	}
+
+/* content styles
+---------------------------------------------------------- */
+
+#content h1 {
+	margin: 0 2em 1em 0;
+	padding: 0;
+    font: normal 20px/24px arial,helvetica,sans-serif;	
+	color: #222;
+	}
+#content h2 {
+	margin: 2em 0 10px 0;
+	padding: 0 0 4px 0;
+	font-size: 90%;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #787;
+	border-bottom: 1px solid #D9E7BD;
+	}
+
+#content p {
+	margin: 0 0 1em 0;
+	padding: 0;
+	}
+
+#content blockquote {
+	margin:20px;
+	padding:12px;
+background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
+
+/* basic phrase element styles */
+
+code, .darkcell span.pre {
+    color: #703040;
+    font: normal 1.1em/1.2em courier, "courier new", Monaco, monospace;
+	text-align: left;
+	}
+
+em {
+	font-style: italic;
+	}
+strong {
+	font-weight: bold;
+	}
+
+
+/* entries home page */
+
+#content div.entry {
+	margin: 0 0 1em 0;
+	border-bottom: 1px solid #D9E7BD;	
+	padding-bottom: 1em;
+	border-bottom: 1px solid #D9E7BD;
+	}
+#content div.entry h2 {
+	margin: 0 0 2px 0;
+	padding: 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	font-family: arial,helvetica,sans-serif;
+    text-transform: none;
+	border: 0;
+	}
+#content div.entry h2 a {
+    font-weight: normal;
+}
+#content div.entry .date {
+	margin: 0 0 5px 0;
+	padding: 0;
+	font-size: 90%;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #787;
+	border: none;
+	}
+
+
+/* features table */
+
+#content table.subscribe {
+	border:none;
+        padding:0px 0px 0px 0px;
+        margin:0px 0px 0px 0px;
+}
+
+#content tr.subscribe td.subscribe {
+	border:none;
+}
+
+#content table {
+    margin: 1em 0;
+    padding-top: 0.5em;
+    border-top: 1px solid #ccc;
+    }
+#content tr td {
+    vertical-align: top;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #e9e9e9;
+    }
+#content tr.feature td.featurename {
+    width: 125px;
+    text-align: left;
+    color: #773;
+    font: normal 14px/1.1em arial,helvetica,sans-serif;
+    }
+#content tr.feature td.featuredesc {
+    padding-left: 20px;
+    }
+#content tr.feature td.featuredesc p { 
+    margin-top: 0;
+    }
+
+
+/* lists */
+
+#content ul, #content ol, #content dl {
+	margin: 1em 0 1em 0;
+	padding: 0;
+	}
+#content ul, #content ol {
+	margin-left: 15px;
+	}
+#content ol {
+	padding-left: 20px;
+	}
+#content ul {
+	list-style: circle;
+	}
+#content ul li {
+	padding: 0 0 4px 0;
+	line-height: 1.3em;
+	}
+
+/* sidebar styles
+---------------------------------------------------------- */
+
+#sidebar .box {
+    margin: 0 0 2em 0;
+    padding: 0 15px 1em 15px;
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;    
+    }
+#sidebar .box .date {
+    color: #666;
+    font-style: italic;
+    }    
+#sidebar h3 {
+	margin: 0 0 10px 0;
+    padding: 15px 0 0 0;
+	font-size: 110%;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #787;
+	}
+#sidebar p {
+	margin: 0;
+	padding: 0;
+	}
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	}
+#sidebar li {
+    padding: 3px 0;
+	line-height: 1.4em;
+	}
+
+#sidebar .donate {
+	color:#000000;
+}
+
+/* footer styles
+---------------------------------------------------------- */
+
+#footer {
+	color: #777;
+	font-size: 90%;
+	}
+#footer p {
+	margin: 0;
+	padding: 0;
+	}
+#footer .pypowered { float: left; margin: 0 10px 0 0;}
+#footer .copyright { float: left;  }
+#footer .sflogo { float: right; }
+
+/* misc.
+---------------------------------------------------------- */
+
+hr, .hide {
+	display: none;
+	}
+a img {
+	border: none;
+	}
+
+.doc_toolbar {
+	float:right;
+}
+
+/* self-clearing floats */
+
+#logo:after, 
+#nav:after, 
+#title:after, 
+#main-body:after {
+	content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+    }
+
+/* 
+Title:     Fixes for IE/win
+Author:    dan@simplebits.com
+Updated:   March 16 2006
+*/
+
+/* self-clearing floats */
+
+* html #logo, 
+* html #nav, 
+* html #title, 
+* html #main-body {
+	height: 1%;
+	}
+
+/* fixes weird IE body padding issue */
+
+* html #wrap { height: 1%; }
+
+
+
