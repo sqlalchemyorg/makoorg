@@ -18,7 +18,7 @@
 <p>Mako is a template library written in Python. It provides a
 familiar, non-XML syntax which compiles into Python modules for
 maximum performance. Mako's syntax and API borrows from the best
-ideas of many others, including Django templates, Cheetah,
+ideas of many others, including Django and Jinja2 templates, Cheetah,
 Myghty, and Genshi. Conceptually, Mako is an embedded Python
 (i.e. Python Server Page) language, which refines the familiar
 ideas of componentized layout and inheritance to produce one of
@@ -27,10 +27,11 @@ also maintaining close ties to Python calling and scoping
 semantics.</p>
 <p>Mako is used by the <a
 href="http://www.python.org/">python.org
-website</a> as well as <a href="http://reddit.com">reddit.com</a>.
+website</a>, as well as <a href="http://reddit.com">reddit.com</a> where it delivers over <a href="http://mashable.com/2011/02/02/reddit-surpasses-1-billion-monthly-pageviews/">one billion page views per month</a>.
+
 It is the default template
 language included with the <a
-href="http://pylonshq.com">Pylons</a> web framework.
+href="https://www.pylonsproject.org/">Pylons and Pyramid</a> web frameworks.
 </p>
 <h2>Nutshell:</h2>
 <pre class="codesample"><%text filter="highlight_mako">
@@ -56,9 +57,6 @@ href="http://pylonshq.com">Pylons</a> web framework.
 <h2>Philosophy:</h2>
 <p>Python is a great scripting language.  Don't reinvent the wheel...your templates can handle it !</p>
 
-<h2>Another Templating Language?!</h2>
-<p>Well, not totally true.  Mako is effectively the replacement for the Myghty templating system, and is now the default template language for the <a href="http://pylonshq.com">Pylons</a> web framework (a framework which originally grew out of Myghty).   Compared to Myghty (and Myghty's inspiration HTML::Mason) it's a vastly simplified and totally Python-centric system which is much better suited to the current generation of WSGI frameworks.   And it does offer features that aren't found in any other template language.
-</p>
 <h2>Features:</h2>
 
 <ul>
