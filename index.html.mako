@@ -1,12 +1,12 @@
-<%inherit file="root.html"/>
+<%inherit file="root.mako"/>
 
-<%namespace name="func" file="functions.incl" import="*"/>
+<%namespace name="func" file="functions.mako" import="*"/>
 <%def name="title()">
     welcome to Mako!
 </%def>
 <%
     # this is a hack to get the functions 
-    # from functions.incl
+    # from functions.mako
     # to be present in the 
     # local namespace for usage in filter
     highlight_mako

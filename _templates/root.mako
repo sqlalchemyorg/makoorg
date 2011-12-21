@@ -6,6 +6,8 @@ in_docs = getattr(next.module, 'in_docs', False)
 <%def name="title()">
 Mako Templates for Python
 </%def>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <head>
 <title>${self.title()} </title>
 ${self.style()}

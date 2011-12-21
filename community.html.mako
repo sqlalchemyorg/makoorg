@@ -1,4 +1,4 @@
-<%inherit file="/root.html"/>
+<%inherit file="/root.mako"/>
 <h1>Community</h1>
 
 
