@@ -32,7 +32,7 @@ ${self.style()}
     &nbsp; | &nbsp;
     <a href="/community.html">Community</a>
     &nbsp; | &nbsp;
-    <a href="/docs/">Documentation</a>
+    <a href="http://docs.makotemplates.org">Documentation</a>
     &nbsp; | &nbsp;
     <a href="/download.html">Download</a>
     </div>
