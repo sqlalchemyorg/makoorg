@@ -1,3 +1,67 @@
+0.6.0
+
+- [feature] Template caching has been converted into a plugin
+  system, whereby the usage of Beaker is just the
+  default plugin.   Template and TemplateLookup
+  now accept a string "cache_impl" parameter which
+  refers to the name of a cache plugin, defaulting
+  to the name 'beaker'.  New plugins can be 
+  registered as pkg_resources entrypoints under
+  the group "mako.cache", or registered directly
+  using mako.cache.register_plugin().  The
+  core plugin is the mako.cache.CacheImpl
+  class.
+
+- [feature] Added support for Beaker cache regions
+  in templates.   Usage of regions should be considered
+  as superseding the very obsolete idea of passing in 
+  backend options, timeouts, etc. within templates.
+
+- [feature] The 'put' method on Cache is now
+  'set'.  'put' is there for backwards compatibility.
+
+- [feature] The <%def>, <%block> and <%page> tags now accept
+  any argument named "cache_*", and the key
+  minus the "cache_" prefix will be passed as keyword
+  arguments to the CacheImpl methods.
+
+- [feature] Template and TemplateLookup now accept an argument 
+  cache_args, which refers to a dictionary containing
+  cache parameters.  The cache_dir, cache_url, cache_type, 
+  cache_timeout arguments are deprecated (will probably 
+  never be removed, however) and can be passed
+  now as cache_args={'url':<some url>, 'type':'memcached',
+  'timeout':50, 'dir':'/path/to/some/directory'}
+
+- [feature/bug] Can now refer to context variables
+  within extra arguments to <%block>, <%def>, i.e.
+  <%block name="foo" cache_key="${somekey}">.
+  Filters can also be used in this way, i.e.
+  <%def name="foo()" filter="myfilter">
+  then template.render(myfilter=some_callable)
+  [ticket:180]
+
+- [feature] Added "--var name=value" option to the mako-render 
+  script, allows passing of kw to the template from 
+  the command line. [ticket:178]
+
+- [feature] Added module_writer argument to Template, 
+  TemplateLookup, allows a callable to be passed which
+  takes over the writing of the template's module source
+  file, so that special environment-specific steps
+  can be taken.  [ticket:181]
+
+- [bug] The exception message in the html_error_template
+  is now escaped with the HTML filter. [ticket:142]
+
+- [bug] Added "white-space:pre" style to html_error_template()
+  for code blocks so that indentation is preserved
+  [ticket:173]
+
+- [bug] The "benchmark" example is now Python 3 compatible
+  (even though several of those old template libs aren't 
+  available on Py3K, so YMMV) [ticket:175]
+
 0.5
 - A Template is explicitly disallowed
   from having a url that normalizes to relative outside
