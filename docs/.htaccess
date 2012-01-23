@@ -1,2 +1,3 @@
 RewriteEngine On
-RewriteRule /docs/(.*) http://docs.makotemplates.org /docs/$1 [R,L]
+RewriteRule .* http://docs.makotemplates.org [R,L]
+
