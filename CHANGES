@@ -1,3 +1,46 @@
+0.7.0
+- [feature] Added new "loop" variable to templates,
+  is provided within a % for block to provide
+  info about the loop such as index, first/last,
+  odd/even, etc.  A migration path is also provided
+  for legacy templates via the "enable_loop" argument
+  available on Template, TemplateLookup, and <%page>.
+  Thanks to Ben Trofatter for all
+  the work on this [ticket:125]
+
+- [feature] Added a real check for "reserved" 
+  names, that is names which are never pulled
+  from the context and cannot be passed to
+  the template.render() method.  Current names
+  are "context", "loop", "UNDEFINED".
+
+- [feature] The html_error_template() will now
+  apply Pygments highlighting to the source
+  code displayed in the traceback, if Pygments 
+  if available.  Courtesy Ben Trofatter 
+  [ticket:95]
+
+- [feature] Added support for context managers,
+  i.e. "% with x as e:/ % endwith" support.
+  Courtesy Ben Trofatter [ticket:147]
+
+- [feature] Added class-level flag to CacheImpl 
+  "pass_context"; when True, the keyword argument
+  'context' will be passed to get_or_create()
+  containing the Mako Context object.
+  [ticket:185]
+
+- [bug] Fixed some Py3K resource warnings due
+  to filehandles being implicitly closed.
+  [ticket:182]
+
+- [bug] Fixed endless recursion bug when 
+  nesting multiple def-calls with content.
+  Thanks to Jeff Dairiki. [ticket:186]
+
+- [feature] Added Jinja2 to the example
+  benchmark suite, courtesy Vincent Férotin
+
 0.6.2
 - [bug] The ${{"foo":"bar"}} parsing issue is fixed!!
   The legendary Eevee has slain the dragon!
