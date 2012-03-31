@@ -44,7 +44,7 @@ href="https://www.pylonsproject.org/">Pylons and Pyramid</a> web frameworks.
         ${makerow(row)}
     % endfor
 </table>
-   
+
 <%def name="makerow(row)">
     <tr>
     % for name in row:
@@ -66,15 +66,12 @@ print Template("hello ${data}!").render(data="world")
     </%text></pre>
     For filesystem management and template caching, add the ${code('TemplateLookup')} class.
     </li>
-    
+
     <li>
-    Insanely Fast.  An included bench suite, adapted from a suite included with Genshi, has these results for a simple three-sectioned layout:
-    <table id="speedchart">
-    <tr><td>Mako:</td><td>1.10 ms</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Myghty:</td><td>4.52 ms</td></tr>
-    <tr><td>Cheetah:</td><td>1.10 ms</td><td></td><td>Genshi:</td><td>11.46 ms</td></tr>
-    <tr><td>Django:</td><td>2.74 ms</td><td></td><td>Kid:</td><td>14.54 ms</td></tr>
-    </table>
-    Since a speed test is always a flashpoint for controversy, and you can modify the bench to show different variances, the point here is not that "Mako is faster"; its not meant as a competitive point.  The point is, "Mako is as fast as any of the other currently popular approaches".  
+    Super fast. As templates are ultimately compiled into Python bytecode,
+    Mako's approach is extremely efficient, and was originally written to be
+    just as fast as Cheetah.  Today, Mako is very close in speed to
+    Jinja2, which uses a similar approach and for which Mako was an inspiration.
     </li>
     <li>Standard template features
     <ul>
@@ -84,22 +81,39 @@ print Template("hello ${data}!").render(data="world")
     </ul></li>
     <li>Callable blocks
     <ul>
+        <li>two types - the <%text><code><%def></code></%text> tag provides Python <code>def</code>
+        semantics, whereas the <%text><code><%block></code></%text> tag behaves more like a
+        Jinja2 content block.</li>
         <li>can access variables from their enclosing scope as well as the template's request context</li>
         <li>can be nested arbitrarily</li>
         <li>can specify regular Python argument signatures</li>
         <li>outer-level callable blocks can be called by other templates or controller code (i.e. "method call")</li>
-        <li>Calls to functions can define any number of sub-blocks of content which are accessible to the called function (i.e. "component-call-with-content").  This is the basis for nestable custom tags.</li>
+        <li>Calls to functions can define any number of sub-blocks of content which are accessible to the called function This is the basis for nestable custom tags.</li>
     </ul>
     </li>
     <li>Inheritance
         <ul>
-        <li>supports "multi-zoned" inheritance - define any number of areas in the base template to be overridden.</li>
+        <li>supports "multi-zoned" inheritance - define any number of areas in
+        the base template to be overridden using <%text><code><%block></code></%text> or
+        <%text><code><%def></code></%text>.</li>
         <li>supports "chaining" style inheritance - call <span class="code">next.body()</span> to call the "inner" content.</li>
         <li>the full inheritance hierarchy is navigable in both directions (i.e. parent and child) from anywhere in the chain.</li>
-        <li>inheritance is dynamic !  Specify a function instead of a filename to calculate inheritance on the fly for every request.</li>
+        <li>inheritance is dynamic!  Specify a function instead of a filename to calculate inheritance on the fly for every request.</li>
         </ul>
     </li>
-    
+    <li>Full-Featured
+            <ul>
+                <li>filters, such as URL escaping, HTML escaping.  Markupsafe is used for performant and secure HTML escaping, and new
+                    filters can be constructed as a plain Python callable.</li>
+                <li>complete caching system, allowing caching to be applied at the page level or individual block/def level.  The 
+                    caching system includes an open API that communicates with <a href="http://beaker.groovie.org">Beaker</a> and 
+                    soon <a href="https://bitbucket.org/zzzeek/dogpile.cache/">dogpile.cache</a>
+                    by default, and new cache backends can be added with ease via setuptools entrypoints.</li>
+                <li>Supports Python 2.4 through modern 3 versions.</li>
+                <li>Supports Google App Engine.</li>
+            </ul>
+    </li>
+
 </ul>
 <div class="pylogo"><a href="http://www.python.org"><img src="/images/python-logo.gif"/></a></div>
 
