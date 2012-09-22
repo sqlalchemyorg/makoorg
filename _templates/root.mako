@@ -21,6 +21,13 @@ ${self.style()}
 <body>
     <div id="wrap">
     <div class="rightbar">
+
+    <div id="gittip_nav">
+    <iframe style="border: 0; margin: 0; padding: 0;"
+    src="https://www.gittip.com/zzzeek/widget.html"
+    width="48pt" height="20pt"></iframe>
+    </div>
+
     <div class="slogan">
     Hyperfast and lightweight templating for the Python platform.
     </div>
@@ -28,14 +35,17 @@ ${self.style()}
     <div class="toolbar">
     <a href="/">Home</a>
     &nbsp; | &nbsp;
-    <a href="/trac">Trac</a> 
+    <a href="/trac">Trac</a>
     &nbsp; | &nbsp;
     <a href="/community.html">Community</a>
     &nbsp; | &nbsp;
     <a href="http://docs.makotemplates.org">Documentation</a>
     &nbsp; | &nbsp;
     <a href="/download.html">Download</a>
+
     </div>
+
+
     </div>
 
     <a href="/"><img src="/images/makoLogo.png" /></a>
