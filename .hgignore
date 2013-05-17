@@ -1,6 +1,4 @@
 syntax:regexp
 ^_site
-^_work
 .pyc$
 .DS_Store
-_config.py
