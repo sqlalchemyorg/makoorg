@@ -5,15 +5,17 @@
     welcome to Mako!
 </%def>
 <%
-    # this is a hack to get the functions 
+    # this is a hack to get the functions
     # from functions.mako
-    # to be present in the 
+    # to be present in the
     # local namespace for usage in filter
     highlight_mako
     highlight_python
 %>
 <h1>Mako Templates for Python</h1>
 
+
+<!-- hiya ! -->
 
 <p>Mako is a template library written in Python. It provides a
 familiar, non-XML syntax which compiles into Python modules for
@@ -105,8 +107,8 @@ print Template("hello ${data}!").render(data="world")
             <ul>
                 <li>filters, such as URL escaping, HTML escaping.  Markupsafe is used for performant and secure HTML escaping, and new
                     filters can be constructed as a plain Python callable.</li>
-                <li>complete caching system, allowing caching to be applied at the page level or individual block/def level.  The 
-                    caching system includes an open API that communicates with <a href="http://beaker.groovie.org">Beaker</a> and 
+                <li>complete caching system, allowing caching to be applied at the page level or individual block/def level.  The
+                    caching system includes an open API that communicates with <a href="http://beaker.groovie.org">Beaker</a> and
                     soon <a href="https://bitbucket.org/zzzeek/dogpile.cache/">dogpile.cache</a>
                     by default, and new cache backends can be added with ease via setuptools entrypoints.</li>
                 <li>Supports Python 2.4 through modern 3 versions.</li>
