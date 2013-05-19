@@ -15,7 +15,7 @@
 <h1>Mako Templates for Python</h1>
 
 
-<!-- hiya ! -->
+<!-- test ! -->
 
 <p>Mako is a template library written in Python. It provides a
 familiar, non-XML syntax which compiles into Python modules for
