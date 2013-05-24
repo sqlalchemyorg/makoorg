@@ -2,7 +2,7 @@
 
 <h1>Download Mako</h1>
 
-<p>Current version is <b>0.8.0</b>
+<p>Current version is <b>0.8.1</b>
 <a href="/CHANGES">(changelog)</a>
 </p>
 <p>If you have <a href="http://pypi.python.org/pypi/pip">pip</a> available:</p>
@@ -16,9 +16,9 @@ pip install Mako
 		<li>an example WSGI template runner app.</li>
 	</ul>
 
-<a href="/downloads/Mako-0.8.0.tar.gz">Local Download</a>
+<a href="/downloads/Mako-0.8.1.tar.gz">Local Download</a>
  |
-<a href="http://www.python.org/pypi/Mako/0.8.0/">On Cheeseshop</a>
+<a href="http://www.python.org/pypi/Mako/0.8.1/">On Cheeseshop</a>
 </p>
 <hr/>
 For information on development verisions see <a href="/trac">trac</a>

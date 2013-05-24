@@ -1,3 +1,21 @@
+0.8.1
+- [bug] Changed setup.py to skip installing markupsafe
+  if Python version is < 2.6 or is between 3.0 and
+  less than 3.3, as Markupsafe now only supports 2.6->2.X,
+  3.3->3.X. [ticket:216]
+
+- [bug] Fixed regression where "entity" filter wasn't
+  converted for py3k properly (added tests.)
+  [ticket:214]
+
+- [bug] Fixed bug where mako-render script wasn't
+  compatible with Py3k.  [ticket:212]
+
+- [bug] Cleaned up all the various deprecation/
+  file warnings when running the tests under
+  various Pythons with warnings turned on.
+  [ticket:213]
+
 0.8.0
 - [feature] Performance improvement to the
   "legacy" HTML escape feature, used for XML
