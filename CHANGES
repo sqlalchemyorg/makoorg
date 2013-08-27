@@ -1,3 +1,29 @@
+0.9.0
+- [bug] The Context.locals_() method becomes a private underscored
+  method, as this method has a specific internal use. The purpose
+  of Context.kwargs has been clarified, in that it only delivers
+  top level keyword arguments originally passed to template.render().
+  [ticket:219]
+
+- [bug] Fixed the babel plugin to properly interpret ${} sections
+  inside of a "call" tag, i.e. <%self:some_tag attr="${_('foo')}"/>.
+  Code that's subject to babel escapes in here needs to be
+  specified as a Python expression, not a literal.  This change
+  is backwards incompatible vs. code that is relying upon a _('')
+  translation to be working within a call tag.
+
+- [bug] The Babel plugin has been repaired to work on Python 3.
+  [ticket:187]
+
+- [bug] Using <%namespace import="*" module="somemodule"/> now
+  skips over module elements that are not explcitly callable,
+  avoiding TypeError when trying to produce partials.
+  [ticket:207]
+
+- [bug] Fixed Py3K bug where a "lambda" expression was not
+  interpreted correctly within a template tag; also
+  fixed in Py2.4.  [ticket:190]
+
 0.8.1
 - [bug] Changed setup.py to skip installing markupsafe
   if Python version is < 2.6 or is between 3.0 and
