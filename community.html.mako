@@ -16,9 +16,19 @@
          <input name="sub" value="Subscribe" type="submit">
     </td>
   </tr>
-   
+
 </table>
 </form>
+
+<hr/>
+
+<h2>Development</h2>
+
+Development of Mako, including bug reports and pull requests, take place
+on <a href="https://bitbucket.org/zzzeek/mako/">Bitbucket</a> using Git.
+Pull requests can also be sent via the
+<a href="https://github.com/zzzeek/mako">Github mirror</a>.
+
 
 <hr/>
 
@@ -28,6 +38,9 @@
 
 <hr/>
 
-<h2>Wiki</h2>
-<p>Visit the Wiki and development timeline over on <a href="/trac">Trac</a>.</p>
+<h2>Syntax Highlighters</h2>
 
+Downloads for a few syntax highlighters are hosted on the Bitbucket page,
+see <a href="https://bitbucket.org/zzzeek/mako/downloads">downloads</a>.
+Other highlighters for editors such as Vim, Kimodo, emacs and SciTE are
+available in other repositories and around the web.
