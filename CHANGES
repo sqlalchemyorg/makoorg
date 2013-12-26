@@ -1,3 +1,22 @@
+0.9.1
+- [bug] Fixed bug in Babel plugin where translator comments
+  would be lost if intervening text nodes were encountered.
+  Fix courtesy Ned Batchelder.  [ticket:225]
+
+- [bug] Fixed TGPlugin.render method to support unicode template
+  names in Py2K - courtesy Vladimir Magamedov.
+
+- [bug] Fixed an AST issue that was preventing correct operation
+  under alpha versions of Python 3.4.  Pullreq courtesy Zer0-.
+
+- [bug] Changed the format of the "source encoding" header output
+  by the code generator to use the format ``# -*- coding:%s -*-``
+  instead of ``# -*- encoding:%s -*-``; the former is more common
+  and compatible with emacs.  Courtesy Martin Geisler.
+
+- [bug] Fixed issue where an old lexer rule prevented a template line
+  which looked like "#*" from being correctly parsed.  [ticket:224]
+
 0.9.0
 - [bug] The Context.locals_() method becomes a private underscored
   method, as this method has a specific internal use. The purpose
