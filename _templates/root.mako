@@ -35,8 +35,6 @@ ${self.style()}
     <div class="toolbar">
     <a href="/">Home</a>
     &nbsp; | &nbsp;
-    <a href="/trac">Trac</a>
-    &nbsp; | &nbsp;
     <a href="/community.html">Community</a>
     &nbsp; | &nbsp;
     <a href="http://docs.makotemplates.org">Documentation</a>
