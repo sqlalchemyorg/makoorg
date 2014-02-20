@@ -27,9 +27,7 @@ ideas of componentized layout and inheritance to produce one of
 the most straightforward and flexible models available, while
 also maintaining close ties to Python calling and scoping
 semantics.</p>
-<p>Mako is used by the <a
-href="http://www.python.org/">python.org
-website</a>, as well as <a href="http://reddit.com">reddit.com</a> where it delivers over <a href="http://mashable.com/2011/02/02/reddit-surpasses-1-billion-monthly-pageviews/">one billion page views per month</a>.
+<p>Mako is used by <a href="http://reddit.com">reddit.com</a> where it delivers over <a href="http://mashable.com/2011/02/02/reddit-surpasses-1-billion-monthly-pageviews/">one billion page views per month</a>.
 
 It is the default template
 language included with the <a
