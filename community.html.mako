@@ -38,9 +38,7 @@ Pull requests can also be sent via the
 
 <hr/>
 
-<h2>Syntax Highlighters</h2>
+<h2>Wiki</h2>
 
-Downloads for a few syntax highlighters are hosted on the Bitbucket page,
-see <a href="https://bitbucket.org/zzzeek/mako/downloads">downloads</a>.
-Other highlighters for editors such as Vim, Kimodo, emacs and SciTE are
-available in other repositories and around the web.
+<p>The <a href="https://bitbucket.org/zzzeek/mako/wiki/Home">Wiki on Bitbucket</a>
+includes links to syntax highlighter plugins for various editors.</p>
