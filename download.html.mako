@@ -3,8 +3,8 @@
 
 <h1>Download Mako</h1>
 
-<p>Current version is <b>0.9.1</b>
-<a href="/docs/changelog.html#change-0.9.1">(changelog)</a>
+<p>Current version is <b>1.0.0</b>
+<a href="/docs/changelog.html#change-1.0.0">(changelog)</a>
 </p>
 
 <p>
