@@ -109,7 +109,7 @@ print Template("hello ${data}!").render(data="world")
                     caching system includes an open API that communicates with <a href="http://beaker.groovie.org">Beaker</a> and
                     soon <a href="https://bitbucket.org/zzzeek/dogpile.cache/">dogpile.cache</a>
                     by default, and new cache backends can be added with ease via setuptools entrypoints.</li>
-                <li>Supports Python 2.4 through modern 3 versions.</li>
+                <li>Supports Python 2.6 through modern 3 versions.</li>
                 <li>Supports Google App Engine.</li>
             </ul>
     </li>
