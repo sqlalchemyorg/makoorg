@@ -62,7 +62,7 @@ href="https://www.pylonsproject.org/">Pylons and Pyramid</a> web frameworks.
 <ul>
     <li>Super-simple API.  For basic usage, just one class, ${code('Template')} is needed:
     <pre class="codesample"><%text filter="highlight_python">from mako.template import Template
-print Template("hello ${data}!").render(data="world")
+print(Template("hello ${data}!").render(data="world"))
     </%text></pre>
     For filesystem management and template caching, add the ${code('TemplateLookup')} class.
     </li>
