@@ -3,15 +3,15 @@
 
 <h1>Download Mako</h1>
 
-<p>Current version is <b>1.0.4</b>
-<a href="/docs/changelog.html#change-1.0.4">(changelog)</a>
+<p>Current changelog is at:
+<a href="/docs/changelog.html">CHANGES</a>
 </p>
 
 <p>
-Download Mako at the <a href="http://www.python.org/pypi/Mako/">Python Cheeseshop</a>.
+The latest version of Mako is on Pypi at <a href="http://www.python.org/pypi/Mako/">Mako</a>.
 </p>
 
-<p>Or install via <a href="http://pypi.python.org/pypi/pip">pip</a>:
+<p>Or install via pip:
 <pre>
 pip install Mako
 </pre>
