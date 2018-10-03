@@ -1,5 +1,11 @@
 <%
 in_docs = getattr(next.module, 'in_docs', False)
+
+if in_docs:
+    self.attr.site_base = site_base = zf.config.site_url
+else:
+    self.attr.site_base = site_base = ""
+
 %>
 
 <html>
@@ -10,6 +16,9 @@ Mako Templates for Python
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <head>
 <title>${self.title()} </title>
+
+<%block name="headers"/>
+
 ${self.style()}
 
 <%def name="style()">
