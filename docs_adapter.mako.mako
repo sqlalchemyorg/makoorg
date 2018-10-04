@@ -58,6 +58,7 @@ else:
         <!-- end iterate through sphinx environment remote css_files -->
     </%block>
 
+
     <%block name="headers">
 
 
@@ -109,7 +110,10 @@ else:
     </%block>
 
     ## other blocks that zzzeeksphinx->static_base.mako calls
-    <%block name="bannerad"/>
+    <%def name="bannerad()">
+        </%text><%include file="/bannerad.mako"/><%text>
+    </%def>
+
     <%block name="footer"/>
     <%block name="lower_scripts"/>
 
