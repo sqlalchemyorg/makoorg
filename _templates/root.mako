@@ -24,6 +24,8 @@ ${self.style()}
 <%def name="style()">
 	<link rel="stylesheet" href="/css/site.css"></link>
 	<link rel="stylesheet" href="/css/highlight.css"></link>
+        <link rel="stylesheet" type="text/css" media="all" href="/css/carbonads.css"/>
+
 </%def>
 
 </head>

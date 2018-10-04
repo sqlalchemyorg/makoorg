@@ -48,6 +48,8 @@ else:
         <!-- end iterate through sphinx environment local css_files -->
 
         <link rel="stylesheet" type="text/css" media="all" href="${site_base}/css/site.css"/>
+        <link rel="stylesheet" type="text/css" media="all" href="${site_base}/css/carbonads.css"/>
+
 
         <!-- begin iterate through sphinx environment remote css_files -->
         % for cssfile in css_files:
