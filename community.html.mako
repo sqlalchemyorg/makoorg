@@ -25,9 +25,8 @@
 <h2>Development</h2>
 
 Development of Mako, including bug reports and pull requests, take place
-on <a href="https://bitbucket.org/zzzeek/mako/">Bitbucket</a> using Git.
-Pull requests can also be sent via the
-<a href="https://github.com/zzzeek/mako">Github mirror</a>.
+on <a href="https://github.com/sqlalchemy/mako/">GitHub</a>, under the
+SQLAlchemy organization.
 
 
 <hr/>
@@ -40,5 +39,5 @@ Pull requests can also be sent via the
 
 <h2>Wiki</h2>
 
-<p>The <a href="https://bitbucket.org/zzzeek/mako/wiki/Home">Wiki on Bitbucket</a>
+<p>The <a href="https://github.com/sqlalchemy/mako/wiki">wiki</a>
 includes links to syntax highlighter plugins for various editors.</p>

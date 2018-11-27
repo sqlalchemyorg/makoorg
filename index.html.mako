@@ -106,10 +106,10 @@ print(Template("hello ${data}!").render(data="world"))
                 <li>filters, such as URL escaping, HTML escaping.  Markupsafe is used for performant and secure HTML escaping, and new
                     filters can be constructed as a plain Python callable.</li>
                 <li>complete caching system, allowing caching to be applied at the page level or individual block/def level.  The
-                    caching system includes an open API that communicates with <a href="http://beaker.groovie.org">Beaker</a> and
-                    soon <a href="https://bitbucket.org/zzzeek/dogpile.cache/">dogpile.cache</a>
-                    by default, and new cache backends can be added with ease via setuptools entrypoints.</li>
-                <li>Supports Python 2.6 through modern 3 versions.</li>
+                    caching system includes an open API that communicates with
+                    <a href="https://github.com/sqlalchemy/dogpile.cache/">dogpile.cache</a>
+                    by default.  New cache backends can be added with ease via setuptools entrypoints.</li>
+                <li>Supports Python 2.7 and Python 3.5 and above.</li>
                 <li>Supports Google App Engine.</li>
             </ul>
     </li>
