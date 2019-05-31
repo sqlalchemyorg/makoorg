@@ -83,3 +83,11 @@ pre.codesample {
 #speedchart {
     margin:5px 10px 5px 10px;
 }
+
+
+img#tidelift-community {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-right: 5px !important;
+}
