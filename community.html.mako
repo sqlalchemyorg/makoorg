@@ -46,8 +46,8 @@ tools.</p>
 
 <h2>Reporting Security Issues</h2>
 
-Mako participates in the <a href="https://tidelift.com/docs/security">Tidelift</a> security reporting infrastructure.
-Please follow the guidelines at <a href="https://tidelift.com/docs/security">Tidelift security</a> in order to report a security issue.
+Mako participates in the <a href="https://tidelift.com/security">Tidelift</a> security reporting infrastructure.
+Please follow the guidelines at <a href="https://tidelift.com/security">Tidelift security</a> in order to report a security issue.
 
 <hr/>
 
