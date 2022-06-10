@@ -18,3 +18,10 @@ pip install Mako
 </p>
 
 
+<h2>Development</h2>
+
+Development of Mako, including bug reports and pull requests, take place
+on <a href="https://github.com/sqlalchemy/mako/">GitHub</a>, under the
+SQLAlchemy organization.
+
+
