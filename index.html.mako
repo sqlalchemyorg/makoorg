@@ -27,12 +27,7 @@ ideas of componentized layout and inheritance to produce one of
 the most straightforward and flexible models available, while
 also maintaining close ties to Python calling and scoping
 semantics.</p>
-<p>Mako is used by <a href="http://reddit.com">reddit.com</a> where it delivers over <a href="http://mashable.com/2011/02/02/reddit-surpasses-1-billion-monthly-pageviews/">one billion page views per month</a>.
 
-It is the default template
-language included with the <a
-href="https://www.pylonsproject.org/">Pylons and Pyramid</a> web frameworks.
-</p>
 <h2>Nutshell:</h2>
 <pre class="codesample"><%text filter="highlight_mako">
 <%inherit file="base.html"/>
