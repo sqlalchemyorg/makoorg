@@ -52,64 +52,6 @@ semantics.</p>
 <h2>Philosophy:</h2>
 <p>Python is a great scripting language.  Don't reinvent the wheel...your templates can handle it !</p>
 
-<h2>Features:</h2>
-
-<ul>
-    <li>Super-simple API.  For basic usage, just one class, ${code('Template')} is needed:
-    <pre class="codesample"><%text filter="highlight_python">from mako.template import Template
-print(Template("hello ${data}!").render(data="world"))
-    </%text></pre>
-    For filesystem management and template caching, add the ${code('TemplateLookup')} class.
-    </li>
-
-    <li>
-    Super fast. As templates are ultimately compiled into Python bytecode,
-    Mako's approach is extremely efficient, and was originally written to be
-    just as fast as Cheetah.  Today, Mako is very close in speed to
-    Jinja2, which uses a similar approach and for which Mako was an inspiration.
-    </li>
-    <li>Standard template features
-    <ul>
-        <li>control structures constructed from real Python code (i.e. loops, conditionals)</li>
-        <li>straight Python blocks, inline or at the module-level</li>
-        <li>plain old includes</li>
-    </ul></li>
-    <li>Callable blocks
-    <ul>
-        <li>two types - the <%text><code><%def></code></%text> tag provides Python <code>def</code>
-        semantics, whereas the <%text><code><%block></code></%text> tag behaves more like a
-        Jinja2 content block.</li>
-        <li>can access variables from their enclosing scope as well as the template's request context</li>
-        <li>can be nested arbitrarily</li>
-        <li>can specify regular Python argument signatures</li>
-        <li>outer-level callable blocks can be called by other templates or controller code (i.e. "method call")</li>
-        <li>Calls to functions can define any number of sub-blocks of content which are accessible to the called function This is the basis for nestable custom tags.</li>
-    </ul>
-    </li>
-    <li>Inheritance
-        <ul>
-        <li>supports "multi-zoned" inheritance - define any number of areas in
-        the base template to be overridden using <%text><code><%block></code></%text> or
-        <%text><code><%def></code></%text>.</li>
-        <li>supports "chaining" style inheritance - call <span class="code">next.body()</span> to call the "inner" content.</li>
-        <li>the full inheritance hierarchy is navigable in both directions (i.e. parent and child) from anywhere in the chain.</li>
-        <li>inheritance is dynamic!  Specify a function instead of a filename to calculate inheritance on the fly for every request.</li>
-        </ul>
-    </li>
-    <li>Full-Featured
-            <ul>
-                <li>filters, such as URL escaping, HTML escaping.  Markupsafe is used for performant and secure HTML escaping, and new
-                    filters can be constructed as a plain Python callable.</li>
-                <li>complete caching system, allowing caching to be applied at the page level or individual block/def level.  The
-                    caching system includes an open API that communicates with
-                    <a href="https://github.com/sqlalchemy/dogpile.cache/">dogpile.cache</a>
-                    by default.  New cache backends can be added with ease via setuptools entrypoints.</li>
-                <li>Supports Python 2.7 and Python 3.5 and above.</li>
-                <li>Supports Google App Engine.</li>
-            </ul>
-    </li>
-
-</ul>
 <div class="pylogo"><a href="http://www.python.org"><img src="/images/python-logo.gif"/></a></div>
 
 <p>To get started, visit the <a href="/docs/">documentation</a>  and the <a href="/download.html">download page</a>.</p>
