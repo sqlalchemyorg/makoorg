@@ -40,7 +40,7 @@ else:
         <!-- end iterate through SQLA css_files -->
 
         <!-- begin iterate through sphinx environment local css_files -->
-        % for cssfile in css_files:
+        % for cssfile in [cf.filename for cf in css_files]:
             % if not cssfile.startswith("http"):
             <link rel="stylesheet" href="${pathto(cssfile, 1)}" type="text/css" />
             % endif
@@ -52,7 +52,7 @@ else:
 
 
         <!-- begin iterate through sphinx environment remote css_files -->
-        % for cssfile in css_files:
+        % for cssfile in [cf.filename for cf in css_files]:
             % if cssfile.startswith("http"):
             <link rel="stylesheet" href="${pathto(cssfile, 1)}" type="text/css" />
             % endif
